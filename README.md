@@ -14,7 +14,7 @@ The R script called run_analysis.R does the following.
 
 ##Directory Listings
 
-The Code for run_analysis.R and Codebook that explains the functionality of the code. There is a folder UCI HAR Dataset which has a README file that explains in detail of the data. 
+The Code for run_analysis.R and Codebook that explains the functionality of the code. There is a folder UCI HAR Dataset which has a README file that explains in detail of the dataset including the observations and variables tracked.
 
 Note: Due to huge size some of the files have beemn left out of the repository.
 
