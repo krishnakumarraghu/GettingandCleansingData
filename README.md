@@ -20,4 +20,4 @@ Note: Due to huge size some of the files have beemn left out of the repository.
 
 ##Pre-Requisites
 
-Only Pre-requisite to run the script is to edit the setwd() in the script to point to the directory where the downloaded documents are kept. 
+Only Pre-requisite to run the script is to edit the setwd() in the script to point to the directory where the downloaded documents are kept. You will also need to edit the directory variable used across the script in case the folder hiercarchy is changed.
