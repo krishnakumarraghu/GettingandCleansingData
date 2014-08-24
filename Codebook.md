@@ -1,8 +1,8 @@
-## CodeBook
+# CodeBook
 
 This code book describes the variables, the data, and any transformations or work that we have performed to clean up the data 
 
-# Background
+## Background
 
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
 
@@ -12,7 +12,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Here are the data for the project: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-# Dataset Information
+## Dataset Information
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
@@ -59,7 +59,7 @@ The script ```run_analysis.R``` is implemented to perform the following activiti
 The Implementation is performed in a 4 module approach. Note that through the code is modular, no explicit functions are used for performing the
 module activities.
 
-# Module : 1 
+## Module : 1 
 
 Here a check for the Working Directory is performed and is set to the folder where we have downloaded the datasets for further analysis.
   
@@ -76,7 +76,7 @@ Further a check is performed to see ,if we have not accidentally removed the zip
      unzip("UCI HAR Dataset.zip")
      }```
 
-# Module : 2 
+## Module : 2 
 
 Here we proceed to read required files into intermedite Dataframes of our choice, from the .txt files.
 We read the feature.txt and activity.txt files followed by all the text files under the /test and /train folders respectively. 
@@ -89,7 +89,7 @@ the name of the dataframe will be dffeature.
   names(dffeature) <- c('feature_id', 'feature_name')```
 
 
-# Module : 3 
+## Module : 3 
 
 Here we merge the training and temp dataframes created under module 2 and filter for Mean & SD Columns. We also add descriptive names to the activities in the dataset.
 
@@ -97,7 +97,7 @@ For filtering out mean and SD columns we use grepl on the feature dataframe and 
 
 ```  meanstdfilter <- grepl("mean|std", dffeature$feature_name) ```
  
-# Module : 4 
+## Module : 4 
 
 Here we create the tidy dataset aggregated over subject & activity and using the write.table generate the necessary file for upload.
 We implement the aggregation using the the aggregate function.
